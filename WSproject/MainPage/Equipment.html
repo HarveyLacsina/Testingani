@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <style>
+          @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Buenard:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zen+Dots&display=swap');
+          </style>
+        <!--<script src="https://unpkg.com/@tailwindcss/browser@4"></script>-->
+ <script src="tailwind.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <style>
+          @layer utilities {
+            .scrollbar-thin::-webkit-scrollbar {
+              width: 10px;
+            }
+            
+            .scrollbar-thin::-webkit-scrollbar-thumb {
+              background: #f3f4f6;
+              border-radius: 4px;
+            }
+          }
+
+          
+        </style>
+        
+    </head>
+    <body class="font-sans h-screen bg-gray-900 flex flex-col ">
+        <!--Top Side-->
+     <div class="flex fixed z-[9999999999999999] bg-black items-center justify-between w-full p-4 h-24" style="font-family: Bebas Neue;">
+          
+      <!--Logo-->
+        <div class="h-20 pl-14 mt-3 w-1/3 flex items-center basis-1/3">
+          <img class="h-full" src="icons/logo.jpg" alt="">
+          <!--Gym Name-->
+        <h1 class="mb-5 text-xl mt-4 text-white ml-3 whitespace-nowrap" style="font-family: 'Zen Dots', serif;">
+          Peak Performance Gym
+        </h1>
+        </div>
+        <div class="ml-auto basis-1/3">
+          <div class="flex whitespace-nowrap h-full text-2xl gap-10 text-white">
+            <button class="cursor-pointer px-4 py-2 rounded-lg  duration-300 transform hover:scale-110 hover:text-red-500 home">
+              <a href="Home.html">HOME</a>
+            </button>
+            <button class="text-red-700 cursor-pointer px-4 py-2 rounded-lg  duration-300 transform hover:scale-110 hover:text-red-500 equipment">
+              <a href="Equipment.html">EQUIPMENT</a>
+            </button>
+            <button class="cursor-pointer px-4 py-2 rounded-lg  duration-300 transform hover:scale-110 hover:text-red-500 services">
+              <a href="Services1.html">SERVICES</a>
+            </button>
+            <button class="cursor-pointer px-4 py-2 rounded-lg  duration-300 transform hover:scale-110 hover:text-red-500 about-us">
+              <a href="AboutUs.html">ABOUT US</a>
+            </button>
+            <button class="cursor-pointer px-4 py-2 rounded-lg  duration-300 transform hover:scale-110 hover:text-red-500 contact-us">
+              <a href="ContactUs.html">CONTACT US</a>
+            </button>
+          </div>
+        </div>
+      
+        <!--SETTINGS-->
+        <div class="relative flex justify-end ml-16 whitespace-nowrap">
+          <!-- Dropdown Button -->
+          <button class="profile-btn">
+              <img src="./icons/userLogo.png" class="w-14 h-14 rounded-full object-cover" alt="userProfile">
+          </button>
+      
+          
+          <a class="flex items-center px-10 py-2 ml-5 mr-10 rounded-lg text-3xl text-red-600 bg-white">
+              YOUR QR CODE
+          </a>
+      
+          <!-- Dropdown Menu -->
+          <div class="absolute right-[-55px] w-72 mr-24 bg-black rounded-lg shadow-lg mt-16 hidden dropdown-menu" style="font-family: 'Bebas Neue', sans-serif;">
+              <div class="flex flex-col items-center gap-y-2 p-4">
+                  <p class="uppercase text-5xl text-white">Juan Dela Cruz</p>
+                  <a href="LoginPage.html" class="flex items-center w-[270px] h-12 bg-red-800 hover:bg-red-500 px-4 rounded-md transition-all duration-200">
+                    <img class="h-9" src="icons/logoutLogo.png" alt="Logout Icon"> 
+                    <span class="flex-1 mr-6 text-center text-2xl">Log out</span>
+                </a>
+              </div>
+          </div>
+      </div>
+      
+      </div>
+
+</div>
+          
+
+        <!--Bottom Side-->
+        <div class="mx-32 flex-grow flex flex-col mt-14" style="font-family: Bebas Neue;">
+          <div class="mt-14 text-6xl">
+            <div class="mb-8">
+              <div class="text-red-600" >Equipments</div>
+            </div>
+          </div>
+        
+          
+            <!-- Equipment Buttons -->
+            <div class=""> 
+              <!-- Equipment Buttons -->
+              <div class="flex w-full gap-4 mb-6">
+                <button class="flex-1  px-10 py-4 text-white text-3xl rounded-xl scale-105 bg-rose-700"><a href="Equipment.html">Chest</a></button>
+                <button class="flex-1 bg-slate-600 px-10 py-4 text-white text-3xl rounded-xl transition-all duration-300 transform hover:scale-105 hover:bg-rose-700"><a href="EquipmentArms.html">Arms</a></button>
+                <button class="flex-1 bg-slate-600 px-10 py-4 text-white text-3xl rounded-xl transition-all duration-300 transform hover:scale-105 hover:bg-rose-700"><a href="EquipmentBack.html">Back</a></button>
+                <button class="flex-1 bg-slate-600 px-10 py-4 text-white text-3xl rounded-xl transition-all duration-300 transform hover:scale-105 hover:bg-rose-700"><a href="EquipmentLegs.html">Legs</a></button>
+              </div>
+
+          <!-- Scrollable Content -->
+          <div class="overflow-y-auto h-[calc(100vh-300px)] scrollbar-thin pr-4"> 
+            <!-- Equipment Boxes (Scrollable) -->
+            <div class="grid grid-cols-2 gap-6 w-full">
+              <!-- Box 1 -->
+              <div class="bg-gray-300 text-black p-6 rounded-xl h-[570px] flex flex-col items-center cursor-pointer openModal1">
+                <div class="w-full h-90 bg-gray-700 rounded-xl flex items-center justify-center">
+                  <img src="icons/c1.jfif" class="w-full rounded-xl h-full object-cover object-[50%_40%]" alt="">
+                </div>
+                <p class="mt-2 text-4xl text-left w-full ml-2">Flat Bench Press</p>
+                <p class="mt-1 text-2xl text-justify" style="font-family: Buenard;">
+                  Lie on your back on the bench with your knees bent and feet flat on the floor. Grasp the barbell, with your thumb wrapped around the barbell and palms facing toward your feet. Press your arms straight toward the ceiling to lift the weight off the rack.
+                </p>
+              </div>
+              
+
+              <!-- Box 2 -->
+              <div class="bg-gray-300 text-black p-6 rounded-xl h-[570px] flex flex-col items-center openModal2">
+                <div class="w-full h-90 bg-gray-700 rounded-xl flex items-center justify-center">
+                  <img src="icons/c2.png" class="w-full rounded-xl h-full object-cover object-[50%_40%]" alt="">
+                </div>
+                <p class="mt-2 text-4xl  text-left w-full ml-2">Bench Press</p>
+                <p class="mt-1 text-2xl text-justify" style="font-family: Buenard;">
+                  This gym equipment targets your upper body muscles such as your pectorals, back, shoulders, and triceps.                </p>
+              </div>
+
+
+              <!-- Box 3 -->
+              <div class="bg-gray-300 text-black p-6 rounded-xl h-[570px] flex flex-col items-center openModal3">
+                <div class="w-full h-90 bg-gray-700 rounded-xl flex items-center justify-center">
+                  <img src="icons/c3.png" class="w-full rounded-xl h-full object-cover object-[50%_50%]" alt="">
+                </div>
+                <p class="mt-2 text-4xl  text-left w-full ml-2">Incline Bench Press</p>
+                <p class="mt-1 text-2xl text-justify" style="font-family: Buenard;">
+                  An incline bench press allows you to move the back support upwards at an angle to target your chest, biceps, and shoulders.                </p>
+              </div>
+
+
+              <!-- Box 4 -->
+              <div class="bg-gray-300 text-black p-6 rounded-xl h-[570px] flex flex-col items-center openModal4">
+                <div class="w-full h-90 bg-gray-700 rounded-xl flex items-center justify-center">
+                  <img src="icons/c4.png" class="w-full rounded-xl h-full object-cover object-[50%_40%]" alt="">
+                </div>
+                <p class="mt-2 text-4xl  text-left w-full ml-2"> Decline Bench Press</p>
+                <p class="mt-1 text-2xl text-justify" style="font-family: Buenard;">
+                  When you use a decline bench press, you will target your triceps, shoulders, abs, and pectoral muscles. It allows you to isolate certain areas and focus on hypertrophy.                
+                </p>
+              </div>
+
+
+              <!-- Box 5 -->
+              <div class="bg-gray-300 text-black p-6 rounded-xl h-[570px] flex flex-col items-center openModal5">
+                <div class="w-full h-90 bg-gray-700 rounded-xl flex items-center justify-center">
+                  <img src="icons/c5.jfif" class="w-full rounded-xl h-full object-cover object-[50%_30%]" alt="">
+                </div>
+                <p class="mt-2 text-4xl  text-left w-full ml-2">Adjustable Bench</p>
+                <p class="mt-1 text-2xl text-justify" style="font-family: Buenard;">
+                  Using an adjustable bench, you activate your pectorals, back, triceps, shoulders, and other supporting muscles.          
+                </p>
+              </div>
+
+
+              <!-- Box 6 -->
+              <div class="bg-gray-300 text-black p-6 rounded-xl h-[570px] flex flex-col items-center openModal6">
+                <div class="w-full h-90 bg-gray-700 rounded-xl flex items-center justify-center">
+                  <img src="icons/c6.jfif" class="w-full rounded-xl h-full object-cover object-[50%_50%]" alt="">
+                </div>
+                <p class="mt-2 text-4xl  text-left w-full ml-2">Chest Fly Machine</p>
+                <p class="mt-1 text-2xl text-justify" style="font-family: Buenard;">
+                  When using this machine you target your pectorals and few supporting ones. It’s a machine that’s great for beginners and advanced gym users.
+                </p>    
+              </div>
+
+              <!-- Box 7 -->
+              <div class="bg-gray-300 text-black p-6 rounded-xl h-[570px] flex flex-col items-center openModal7">
+                <div class="w-full h-90 bg-gray-700 rounded-xl flex items-center justify-center">
+                  <img src="icons/c7.jfif" class="w-full rounded-xl h-full object-cover object-[50%_25%]" alt="">
+                </div>
+                <p class="mt-2 text-4xl  text-left w-full ml-2">Cable crossover</p>
+                <p class="mt-1 text-2xl text-justify" style="font-family: Buenard;">
+                  Begin by standing away from a set of high pulley cable machine resistance band anchored overhead. Select a light to moderate weight to add challenge but give you success.              
+                </p>
+                </div>
+
+              <!-- Box 8 -->
+              <div class="bg-gray-300 text-black p-6 rounded-xl h-[570px] flex flex-col items-center openModal8">
+                <div class="w-full h-90 bg-gray-700 rounded-xl flex items-center justify-center">
+                  <img src="icons/c8.jfif" class="w-full rounded-xl h-full object-cover object-[50%_0%]" alt="">
+                </div>
+                <p class="mt-2 text-4xl  text-left w-full ml-2">chest dip</p>
+                <p class="mt-1 text-2xl text-justify" style="font-family: Buenard;">
+                  Stand facing the two parallel bars and grasp them, palms facing in.
+                </p>
+              </div>
+        
+              
+
+              
+            </div>
+          </div>
+        </div>
+        
+        
+ <!--MOdal-->  
+ <!--No 1-->
+ <div  class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden exerciseModal1 ">
+  <div class="bg-white p-6 flex flex-col justify-center align-center rounded-xl w-[800px]  text-center shadow-lg">
+    <div class="w-full h-96 bg-gray-700 rounded-xl flex items-center justify-center">
+      <img src="icons/c1.jfif" class="w-full rounded-xl h-full object-cover object-[50%_40%]" alt="">
+    </div>
+    <div>
+      <h2 class="text-5xl font-bold mb-4">Flat Bench Press</h2>
+      <p class="text-xl">
+      Lie on your back on the bench with your knees bent and feet flat on the floor. Grasp the barbell, with your thumb wrapped around the barbell and palms facing toward your feet. Press your arms straight toward the ceiling to lift the weight off the rack.
+      </p>
+      <button class="mt-4 bg-red-500 text-2xl text-white px-10 py-2 rounded hover:bg-red-600 closeModal1">Close</button>
+    </div>
+    
+  </div>
+</div>
+<!-- NO 2 -->
+<div class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden exerciseModal2">
+  <div class="bg-white p-6 flex flex-col justify-center align-center rounded-xl w-[800px] text-center shadow-lg">
+    <div class="w-full h-96 bg-gray-700 rounded-xl flex items-center justify-center">
+      <img src="icons/c2.png" class="w-full rounded-xl h-full object-cover object-[50%_40%]" alt="">
+    </div>
+    <div>
+      <h2 class="text-5xl font-bold mb-4">Bench Press</h2>
+      <p class="text-xl">
+        This gym equipment targets your upper body muscles such as your pectorals, back, shoulders, and triceps.
+      </p>
+      <button class="mt-4 bg-red-500 text-2xl text-white px-10 py-2 rounded hover:bg-red-600 closeModal2">Close</button>
+    </div>
+  </div>
+</div>
+<!-- NO 3 -->
+<div class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden exerciseModal3">
+  <div class="bg-white p-6 flex flex-col justify-center align-center rounded-xl w-[800px] text-center shadow-lg">
+    <div class="w-full h-96 bg-gray-700 rounded-xl flex items-center justify-center">
+      <img src="icons/c3.png" class="w-full rounded-xl h-full object-cover object-[50%_50%]" alt="">
+    </div>
+    <div>
+      <h2 class="text-5xl font-bold mb-4">Incline Bench Press</h2>
+      <p class="text-xl">
+        An incline bench press allows you to move the back support upwards at an angle to target your chest, biceps, and shoulders.
+      </p>
+      <button class="mt-4 bg-red-500 text-2xl text-white px-10 py-2 rounded hover:bg-red-600 closeModal3">Close</button>
+    </div>
+  </div>
+</div>
+<!-- NO 4 -->
+<div class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden exerciseModal4">
+  <div class="bg-white p-6 flex flex-col justify-center align-center rounded-xl w-[800px] text-center shadow-lg">
+    <div class="w-full h-96 bg-gray-700 rounded-xl flex items-center justify-center">
+      <img src="icons/c4.png" class="w-full rounded-xl h-full object-cover object-[50%_40%]" alt="">
+    </div>
+    <div>
+      <h2 class="text-5xl font-bold mb-4">Decline Bench Press</h2>
+      <p class="text-xl">
+        When you use a decline bench press, you will target your triceps, shoulders, abs, and pectoral muscles. It allows you to isolate certain areas and focus on hypertrophy.
+      </p>
+      <button class="mt-4 bg-red-500 text-2xl text-white px-10 py-2 rounded hover:bg-red-600 closeModal4">Close</button>
+    </div>
+  </div>
+</div>
+<!-- NO 5 -->
+<div class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden exerciseModal5">
+  <div class="bg-white p-6 flex flex-col justify-center align-center rounded-xl w-[800px] text-center shadow-lg">
+    <div class="w-full h-96 bg-gray-700 rounded-xl flex items-center justify-center">
+      <img src="icons/c5.jfif" class="w-full rounded-xl h-full object-cover object-[50%_30%]" alt="">
+    </div>
+    <div>
+      <h2 class="text-5xl font-bold mb-4">Adjustable Bench</h2>
+      <p class="text-xl">
+        Using an adjustable bench, you activate your pectorals, back, triceps, shoulders, and other supporting muscles.
+      </p>
+      <button class="mt-4 bg-red-500 text-2xl text-white px-10 py-2 rounded hover:bg-red-600 closeModal5">Close</button>
+    </div>
+  </div>
+</div>
+<!-- NO 6 -->
+<div class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden exerciseModal6">
+  <div class="bg-white p-6 flex flex-col justify-center align-center rounded-xl w-[800px] text-center shadow-lg">
+    <div class="w-full h-96 bg-gray-700 rounded-xl flex items-center justify-center">
+      <img src="icons/c6.jfif" class="w-full rounded-xl h-full object-cover object-[50%_50%]" alt="">
+    </div>
+    <div>
+      <h2 class="text-5xl font-bold mb-4">Chest Fly Machine</h2>
+      <p class="text-xl">
+        When using this machine, you target your pectorals and a few supporting muscles. It’s a great machine for both beginners and advanced gym users.
+      </p>
+      <button class="mt-4 bg-red-500 text-2xl text-white px-10 py-2 rounded hover:bg-red-600 closeModal6">Close</button>
+    </div>
+  </div>
+</div>
+<!-- NO 7-->
+<div class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden exerciseModal7">
+  <div class="bg-white p-6 flex flex-col justify-center align-center rounded-xl w-[800px] text-center shadow-lg">
+    <div class="w-full h-96 bg-gray-700 rounded-xl flex items-center justify-center">
+      <img src="icons/c7.jfif" class="w-full rounded-xl h-full object-cover object-[50%_25%]" alt="">
+    </div>
+    <div>
+      <h2 class="text-5xl font-bold mb-4">Cable Crossover</h2>
+      <p class="text-xl">
+        Begin by standing away from a set of high pulley cable machine resistance bands anchored overhead. Select a light to moderate weight to add challenge but give you success.
+      </p>
+      <button class="mt-4 bg-red-500 text-2xl text-white px-10 py-2 rounded hover:bg-red-600 closeModal7">Close</button>
+    </div>
+  </div>
+</div>
+<!--No 8-->
+<div  class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden exerciseModal8 ">
+  <div class="bg-white p-6 flex flex-col justify-center align-center rounded-xl w-[800px]  text-center shadow-lg">
+    <div class="w-full h-96 bg-gray-700 rounded-xl flex items-center justify-center">
+      <img src="icons/c8.jfif" class="w-full rounded-xl h-full object-cover object-[50%_0%]" alt="">
+    </div>
+    <div>
+      <h2 class="text-5xl font-bold mb-4">chest dip</h2>
+      <p class="text-xl">
+        Stand facing the two parallel bars and grasp them, palms facing in.
+      </p>
+      <button class="mt-4 bg-red-500 text-2xl text-white px-10 py-2 rounded hover:bg-red-600 closeModal8">Close</button>
+    </div>
+    
+  </div>
+</div>
+
+    
+
+
+        
+        
+       
+        
+<script>
+ $(document).ready(function () {
+    function handleModal(openClass, modalClass, closeClass) {
+      $(openClass).click(function () {
+        $(modalClass).removeClass("hidden");
+      });
+      
+      $(closeClass).click(function () {
+        $(modalClass).addClass("hidden");
+      });
+      
+      $(modalClass).click(function (e) {
+        if (e.target === this) {
+          $(this).addClass("hidden");
+        }
+      });
+    }
+
+    handleModal(".openModal1", ".exerciseModal1", ".closeModal1");
+    handleModal(".openModal2", ".exerciseModal2", ".closeModal2");
+    handleModal(".openModal3", ".exerciseModal3", ".closeModal3");
+    handleModal(".openModal4", ".exerciseModal4", ".closeModal4");
+    handleModal(".openModal5", ".exerciseModal5", ".closeModal5");
+    handleModal(".openModal6", ".exerciseModal6", ".closeModal6");
+    handleModal(".openModal7", ".exerciseModal7", ".closeModal7");
+    handleModal(".openModal8", ".exerciseModal8", ".closeModal8");
+  });
+
+
+
+   $(document).ready(function () {
+   
+        $(".profile-btn").click(function () {
+            $(".dropdown-menu").toggleClass("block hidden");
+        });
+    
+});
+</script>
+
+    </body>
+</html>

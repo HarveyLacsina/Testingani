@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <style>
+          @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Buenard:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zen+Dots&display=swap');
+          </style>
+        <!--<script src="https://unpkg.com/@tailwindcss/browser@4"></script>-->
+        <script src="tailwind.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <style>
+          @layer utilities {
+            .scrollbar-thin::-webkit-scrollbar {
+              width: 10px;
+            }
+            
+            .scrollbar-thin::-webkit-scrollbar-thumb {
+              background: #f3f4f6;
+              border-radius: 4px;
+            }
+          }
+        </style>
+        
+    </head>
+    <body class="font-sans h-screen bg-gray-900 flex flex-col ">
+        <!--Top Side-->
+     <div class="flex fixed z-[9999999999999999] bg-black items-center justify-between w-full p-4 h-24" style="font-family: Bebas Neue;">
+          
+      <!--Logo-->
+        <div class="h-20 pl-14 mt-3 w-1/3 flex items-center basis-1/3">
+          <img class="h-full" src="icons/logo.jpg" alt="">
+          <!--Gym Name-->
+        <h1 class="mb-5 text-xl mt-4 text-white ml-3 whitespace-nowrap" style="font-family: 'Zen Dots', serif;">
+          Peak Performance Gym
+        </h1>
+        </div>
+        <div class="ml-auto basis-1/3">
+          <div class="flex whitespace-nowrap h-full text-2xl gap-10 text-white">
+            <button class="cursor-pointer px-4 py-2 rounded-lg  duration-300 transform hover:scale-110 hover:text-red-500 home">
+              <a href="Home.html">HOME</a>
+            </button>
+            <button class="text-red-700 cursor-pointer px-4 py-2 rounded-lg  duration-300 transform hover:scale-110 hover:text-red-500 equipment">
+              <a href="Equipment.html">EQUIPMENT</a>
+            </button>
+            <button class="cursor-pointer px-4 py-2 rounded-lg  duration-300 transform hover:scale-110 hover:text-red-500 services">
+              <a href="Services1.html">SERVICES</a>
+            </button>
+            <button class="cursor-pointer px-4 py-2 rounded-lg  duration-300 transform hover:scale-110 hover:text-red-500 about-us">
+              <a href="AboutUs.html">ABOUT US</a>
+            </button>
+            <button class="cursor-pointer px-4 py-2 rounded-lg  duration-300 transform hover:scale-110 hover:text-red-500 contact-us">
+              <a href="ContactUs.html">CONTACT US</a>
+            </button>
+          </div>
+        </div>
+      
+        <!--SETTINGS-->
+        <div class="relative flex justify-end ml-16 whitespace-nowrap">
+          <!-- Dropdown Button -->
+          <button class="profile-btn">
+              <img src="./icons/userLogo.png" class="w-14 h-14 rounded-full object-cover" alt="userProfile">
+          </button>
+      
+          
+          <a href="qrcode.html" class="flex items-center px-10 py-2 ml-5 mr-10 rounded-lg text-3xl text-red-600 bg-white">
+              YOUR QR CODE
+          </a>
+      
+          <!-- Dropdown Menu -->
+          <div class="absolute right-[-55px] w-72 mr-24 bg-black rounded-lg shadow-lg mt-16 hidden dropdown-menu" style="font-family: 'Bebas Neue', sans-serif;">
+              <div class="flex flex-col items-center gap-y-2 p-4">
+                  <p class="uppercase text-5xl text-white">Juan Dela Cruz</p>
+                  <a href="LoginPage.html" class="flex items-center w-[270px] h-12 bg-red-800 hover:bg-red-500 px-4 rounded-md transition-all duration-200">
+                    <img class="h-9" src="icons/logoutLogo.png" alt="Logout Icon"> 
+                    <span class="flex-1 mr-6 text-center text-2xl">Log out</span>
+                </a>
+              </div>
+          </div>
+      </div>
+      
+      </div>
+
+</div>
+          
+
+        <!--Bottom Side-->
+        <div class="mx-32 flex-grow flex flex-col mt-14" style="font-family: Bebas Neue;">
+          <div class="mt-14 text-6xl">
+            <div class="mb-8">
+              <div class="text-red-600" >Equipments</div>
+            </div>
+          </div>
+        
+          
+            <!-- Equipment Buttons -->
+            <div class=""> 
+              <!-- Equipment Buttons -->
+              <div class="flex w-full gap-4 mb-6">
+                <button class="flex-1 bg-slate-600 px-10 py-4 text-white text-3xl rounded-xl transition-all duration-300 transform hover:scale-105 hover:bg-rose-700"><a href="Equipment.html">Chest</a></button>
+                <button class="flex-1 bg-slate-600 px-10 py-4 text-white text-3xl rounded-xl transition-all duration-300 transform hover:scale-105 hover:bg-rose-700"><a href="EquipmentArms.html">Arms</a></button>
+                <button class="flex-1 bg-slate-600 px-10 py-4 text-white text-3xl rounded-xl transition-all duration-300 transform hover:scale-105 hover:bg-rose-700"><a href="EquipmentBack.html">Back</a></button>
+                <button class="flex-1  px-10 py-4 text-white text-3xl rounded-xl scale-105 bg-rose-700">Legs</a></button>
+              </div>
+
+          <!-- Scrollable Content -->
+          <div class="overflow-y-auto h-[calc(100vh-300px)] scrollbar-thin pr-4"> 
+            <!-- Equipment Boxes (Scrollable) -->
+            <div class="grid grid-cols-2 gap-6 w-full">
+              <!-- Box 1 -->
+              <div class="bg-gray-300 text-black p-6 rounded-xl h-[570px] flex flex-col items-center openModal1">
+                <div class="w-full h-90 bg-gray-700 rounded-xl flex items-center justify-center">
+                  <img src="icons/l1.jfif" class="w-full rounded-xl h-full object-cover object-[50%_60%]" alt="">
+                </div>
+                <p class="mt-2 text-4xl  text-left w-full ml-2">Half Rack for Squats</p>
+                <p class="mt-1 text-2xl text-justify" style="font-family: Buenard;">
+                  Half racks are incredibly versatile and can be used for a number of different exercises. They take up less space than a full rack, consisting of two vertical posts with adjustable bars on each side                </p>
+              </div>
+
+              <!-- Box 2 -->
+              <div class="bg-gray-300 text-black p-6 rounded-xl h-[570px] flex flex-col items-center openModal2">
+                <div class="w-full h-90 bg-gray-700 rounded-xl flex items-center justify-center">
+                  <img src="icons/l2.png" class="w-full rounded-xl h-full object-cover object-[50%_40%]" alt="">
+                </div>
+                <p class="mt-2 text-4xl  text-left w-full ml-2">Calf Machine</p>
+                <p class="mt-1 text-2xl text-justify" style="font-family: Buenard;">
+                  Isolating your calves builds a foundation of strength for your lower body. Your calf consists of two muscles: the smaller soleus muscle and the larger gastrocnemius muscle.                </p>
+              </div>
+
+
+              <!-- Box 3 -->
+              <div class="bg-gray-300 text-black p-6 rounded-xl h-[570px] flex flex-col items-center openModal3">
+                <div class="w-full h-90 bg-gray-700 rounded-xl flex items-center justify-center">
+                  <img src="icons/l3.png" class="w-full rounded-xl h-full object-cover object-[50%_55%]" alt="">
+                </div>
+                <p class="mt-2 text-4xl  text-left w-full ml-2">Smith Machine</p>
+                <p class="mt-1 text-2xl text-justify" style="font-family: Buenard;">
+                  The Smith machine differs from a regular squat rack because the barbell is fixed and slides up and down using a carriage system with safety stoppers along the track.                </p>
+              </div>
+
+
+              <!-- Box 4 -->
+              <div class="bg-gray-300 text-black p-6 rounded-xl h-[570px] flex flex-col items-center openModal4">
+                <div class="w-full h-90 bg-gray-700 rounded-xl flex items-center justify-center">
+                  <img src="icons/l4.png" class="w-full rounded-xl h-full object-cover object-[50%_40%]" alt="">
+                </div>
+                <p class="mt-2 text-4xl  text-left w-full ml-2">Hip Abductor Machine</p>
+                <p class="mt-1 text-2xl text-justify" style="font-family: Buenard;">
+                  Hip abduction is the movement of the leg away from the midline of the body. This makes the hip abduction machine the one with the pads positioned on the outside of the thighs. As the legs are pressed outwards, the hip abductors and gluteus maximus are utilized.                 </p>
+              </div>
+
+
+              <!-- Box 5 -->
+              <div class="bg-gray-300 text-black p-6 rounded-xl h-[570px] flex flex-col items-center openModal5">
+                <div class="w-full h-90 bg-gray-700 rounded-xl flex items-center justify-center">
+                  <img src="icons/l5.jfif" class="w-full rounded-xl h-full object-cover object-[50%_50%]" alt="">
+                </div>
+                <p class="mt-2 text-4xl  text-left w-full ml-2">Leg Curl Machine</p>
+                <p class="mt-1 text-2xl text-justify" style="font-family: Buenard;">
+                  The machine requires you to lie face down, with the roller pad placed just above the heels. To perform a leg curl, bend the knees and draw the heels towards the glutes.                 </p>
+              </div>
+
+
+              <!-- Box 6 -->
+              <div class="bg-gray-300 text-black p-6 rounded-xl h-[570px] flex flex-col items-center openModal6">
+                <div class="w-full h-90 bg-gray-700 rounded-xl flex items-center justify-center">
+                  <img src="icons/l6.png" class="w-full rounded-xl h-full object-cover object-[50%_50%]" alt="">
+                </div>
+                <p class="mt-2 text-4xl  text-left w-full ml-2">Hack Squat Machine</p>
+                <p class="mt-1 text-2xl text-justify" style="font-family: Buenard;">
+                  The hack squat has a similar motion to the leg press. While they target similar muscle groups, each machine applies its load to the lifter differently. In the hack squat, the lifter stands beneath shoulder pads against a backrest on a fixed platform,               </div>
+
+              <!-- Box 7 -->
+              <div class="bg-gray-300 text-black p-6 rounded-xl h-[570px] flex flex-col items-center openModal7">
+                <div class="w-full h-90 bg-gray-700 rounded-xl flex items-center justify-center">
+                  <img src="icons/l7.jfif" class="w-full rounded-xl h-full object-cover object-[50%_50%]" alt="">
+                </div>
+                <p class="mt-2 text-4xl  text-left w-full ml-2">Leg Extension Machine</p>
+                <p class="mt-1 text-2xl text-justify" style="font-family: Buenard;">
+                  If you’re new to strength training, the leg extension machine is a great place to start because it has a simple setup. This is a seated exercise where a weighted pad rests on the top of the lower legs, starting with the knees bent at 90 degrees.                 </p>
+                </div>
+
+              <!-- Box 8 -->
+              <div class="bg-gray-300 text-black p-6 rounded-xl h-[570px] flex flex-col items-center openModal8">
+                <div class="w-full h-90 bg-gray-700 rounded-xl flex items-center justify-center">
+                  <img src="icons/l8.png" class="w-full rounded-xl h-full object-cover object-[50%_50%]" alt="">
+                </div>
+                <p class="mt-2 text-4xl  text-left w-full ml-2">Leg Press Machine</p>
+                <p class="mt-1 text-2xl text-justify" style="font-family: Buenard;">
+                  The three most common types of leg press machines differ based on the angle the exercise is performed at. The vertical leg press will have you positioned on your back. The horizontal leg press is performed from a seated position and the 45-degree leg press will have your back at a 45-degree angle.                </p>
+              </div>
+        
+              
+
+              
+            </div>
+          </div>
+        </div>
+
+        <!--Modal-->
+        <!-- Modal 1 -->
+<div class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden exerciseModal1">
+  <div class="bg-white p-6 flex flex-col justify-center align-center rounded-xl w-[800px] text-center shadow-lg">
+    <div class="w-full h-96 bg-gray-700 rounded-xl flex items-center justify-center">
+      <img src="icons/l1.jfif" class="w-full rounded-xl h-full object-cover object-[50%_60%]" alt="">
+    </div>
+    <h2 class="text-5xl font-bold mb-4">Half Rack for Squats</h2>
+    <p class="text-xl">Half racks are incredibly versatile and can be used for a number of different exercises. They take up less space than a full rack, consisting of two vertical posts with adjustable bars on each side.</p>
+    <button class="mt-4 bg-red-500 text-2xl text-white px-10 py-2 rounded hover:bg-red-600 closeModal1">Close</button>
+  </div>
+</div>
+
+<!-- Modal 2 -->
+<div class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden exerciseModal2">
+  <div class="bg-white p-6 flex flex-col justify-center align-center rounded-xl w-[800px] text-center shadow-lg">
+    <div class="w-full h-96 bg-gray-700 rounded-xl flex items-center justify-center">
+      <img src="icons/l2.png" class="w-full rounded-xl h-full object-cover object-[50%_40%]" alt="">
+    </div>
+    <h2 class="text-5xl font-bold mb-4">Calf Machine</h2>
+    <p class="text-xl">Isolating your calves builds a foundation of strength for your lower body. Your calf consists of two muscles: the smaller soleus muscle and the larger gastrocnemius muscle.</p>
+    <button class="mt-4 bg-red-500 text-2xl text-white px-10 py-2 rounded hover:bg-red-600 closeModal2">Close</button>
+  </div>
+</div>
+
+<!-- Modal 3 -->
+<div class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden exerciseModal3">
+  <div class="bg-white p-6 flex flex-col justify-center align-center rounded-xl w-[800px] text-center shadow-lg">
+    <div class="w-full h-96 bg-gray-700 rounded-xl flex items-center justify-center">
+      <img src="icons/l3.png" class="w-full rounded-xl h-full object-cover object-[50%_55%]" alt="">
+    </div>
+    <h2 class="text-5xl font-bold mb-4">Smith Machine</h2>
+    <p class="text-xl">The Smith machine differs from a regular squat rack because the barbell is fixed and slides up and down using a carriage system with safety stoppers along the track.</p>
+    <button class="mt-4 bg-red-500 text-2xl text-white px-10 py-2 rounded hover:bg-red-600 closeModal3">Close</button>
+  </div>
+</div>
+
+<!-- Modal 4 -->
+<div class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden exerciseModal4">
+  <div class="bg-white p-6 flex flex-col justify-center align-center rounded-xl w-[800px] text-center shadow-lg">
+    <div class="w-full h-96 bg-gray-700 rounded-xl flex items-center justify-center">
+      <img src="icons/l4.png" class="w-full rounded-xl h-full object-cover object-[50%_40%]" alt="">
+    </div>
+    <h2 class="text-5xl font-bold mb-4">Hip Abductor Machine</h2>
+    <p class="text-xl">Hip abduction is the movement of the leg away from the midline of the body. This makes the hip abduction machine the one with the pads positioned on the outside of the thighs. As the legs are pressed outwards, the hip abductors and gluteus maximus are utilized.</p>
+    <button class="mt-4 bg-red-500 text-2xl text-white px-10 py-2 rounded hover:bg-red-600 closeModal4">Close</button>
+  </div>
+</div>
+
+<!-- Modal 5 -->
+<div class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden exerciseModal5">
+  <div class="bg-white p-6 flex flex-col justify-center align-center rounded-xl w-[800px] text-center shadow-lg">
+    <div class="w-full h-96 bg-gray-700 rounded-xl flex items-center justify-center">
+      <img src="icons/l5.jfif" class="w-full rounded-xl h-full object-cover object-[50%_50%]" alt="">
+    </div>
+    <h2 class="text-5xl font-bold mb-4">Leg Curl Machine</h2>
+    <p class="text-xl">The machine requires you to lie face down, with the roller pad placed just above the heels. To perform a leg curl, bend the knees and draw the heels towards the glutes.</p>
+    <button class="mt-4 bg-red-500 text-2xl text-white px-10 py-2 rounded hover:bg-red-600 closeModal5">Close</button>
+  </div>
+</div>
+
+<!-- Modal 6 -->
+<div class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden exerciseModal6">
+  <div class="bg-white p-6 flex flex-col justify-center align-center rounded-xl w-[800px] text-center shadow-lg">
+    <div class="w-full h-96 bg-gray-700 rounded-xl flex items-center justify-center">
+      <img src="icons/l6.png" class="w-full rounded-xl h-full object-cover object-[50%_50%]" alt="">
+    </div>
+    <h2 class="text-5xl font-bold mb-4">Hack Squat Machine</h2>
+    <p class="text-xl">The hack squat has a similar motion to the leg press. While they target similar muscle groups, each machine applies its load to the lifter differently. In the hack squat, the lifter stands beneath shoulder pads against a backrest on a fixed platform.</p>
+    <button class="mt-4 bg-red-500 text-2xl text-white px-10 py-2 rounded hover:bg-red-600 closeModal6">Close</button>
+  </div>
+</div>
+<!-- Modal 7 -->
+<div class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden exerciseModal7">
+  <div class="bg-white p-6 flex flex-col justify-center align-center rounded-xl w-[800px] text-center shadow-lg">
+    <div class="w-full h-96 bg-gray-700 rounded-xl flex items-center justify-center">
+      <img src="icons/l7.jfif" class="w-full rounded-xl h-full object-cover object-[50%_50%]" alt="">
+    </div>
+    <h2 class="text-5xl font-bold mb-4">Leg Extension Machine</h2>
+    <p class="text-xl">If you’re new to strength training, the leg extension machine is a great place to start because it has a simple setup. This is a seated exercise where a weighted pad rests on the top of the lower legs, starting with the knees bent at 90 degrees.</p>
+    <button class="mt-4 bg-red-500 text-2xl text-white px-10 py-2 rounded hover:bg-red-600 closeModal7">Close</button>
+  </div>
+</div>
+<!-- Modal 8 -->
+<div class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden exerciseModal8">
+  <div class="bg-white p-6 flex flex-col justify-center align-center rounded-xl w-[800px] text-center shadow-lg">
+    <div class="w-full h-96 bg-gray-700 rounded-xl flex items-center justify-center">
+      <img src="icons/l8.png" class="w-full rounded-xl h-full object-cover object-[50%_50%]" alt="">
+    </div>
+    <h2 class="text-5xl font-bold mb-4">Leg Press Machine</h2>
+    <p class="text-xl">The three most common types of leg press machines differ based on the angle the exercise is performed at. The vertical leg press will have you positioned on your back. The horizontal leg press is performed from a seated position and the 45-degree leg press will have your back at a 45-degree angle.</p>
+    <button class="mt-4 bg-red-500 text-2xl text-white px-10 py-2 rounded hover:bg-red-600 closeModal8">Close</button>
+  </div>
+</div>
+        
+        
+
+
+        
+        
+       
+        
+<script>
+  $(document).ready(function () {
+    function handleModal(openClass, modalClass, closeClass) {
+      $(openClass).click(function () {
+        $(modalClass).removeClass("hidden");
+      });
+      
+      $(closeClass).click(function () {
+        $(modalClass).addClass("hidden");
+      });
+      
+      $(modalClass).click(function (e) {
+        if (e.target === this) {
+          $(this).addClass("hidden");
+        }
+      });
+    }
+
+    handleModal(".openModal1", ".exerciseModal1", ".closeModal1");
+    handleModal(".openModal2", ".exerciseModal2", ".closeModal2");
+    handleModal(".openModal3", ".exerciseModal3", ".closeModal3");
+    handleModal(".openModal4", ".exerciseModal4", ".closeModal4");
+    handleModal(".openModal5", ".exerciseModal5", ".closeModal5");
+    handleModal(".openModal6", ".exerciseModal6", ".closeModal6");
+    handleModal(".openModal7", ".exerciseModal7", ".closeModal7");
+    handleModal(".openModal8", ".exerciseModal8", ".closeModal8");
+  });
+
+    $(document).ready(function () {
+   
+   $(".profile-btn").click(function () {
+       $(".dropdown-menu").toggleClass("block hidden");
+   });
+
+});
+</script>
+
+    </body>
+</html>

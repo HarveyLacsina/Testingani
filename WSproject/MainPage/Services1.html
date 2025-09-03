@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <style>
+          @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Buenard:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zen+Dots&display=swap');
+          </style>
+        <!--<script src="https://unpkg.com/@tailwindcss/browser@4"></script>-->
+        <script src="tailwind.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <style>
+          @layer utilities {
+            .scrollbar-thin::-webkit-scrollbar {
+              width: 10px;
+            }
+            
+            .scrollbar-thin::-webkit-scrollbar-thumb {
+              background: #f3f4f6;
+              border-radius: 4px;
+            }
+          }
+        </style>
+        
+    </head>
+    <body class="font-sans h-screen bg-gray-900 flex flex-col">
+        <!--Top Side-->
+     <div class="flex fixed z-[9999999999999999] bg-black items-center justify-between w-full p-4 h-24" style="font-family: Bebas Neue;">
+          
+      <!--Logo-->
+        <div class="h-20 pl-14 mt-3 w-1/3 flex items-center basis-1/3">
+          <img class="h-full" src="icons/logo.jpg" alt="">
+          <!--Gym Name-->
+        <h1 class="mb-5 text-xl mt-4 text-white ml-3 whitespace-nowrap" style="font-family: 'Zen Dots', serif;">
+          Peak Performance Gym
+        </h1>
+        </div>
+        <div class="ml-auto basis-1/3">
+          <div class="flex whitespace-nowrap h-full text-2xl gap-10 text-white">
+            <button class="cursor-pointer px-4 py-2 rounded-lg  duration-300 transform hover:scale-110 hover:text-red-500 home">
+              <a href="Home.html">HOME</a>
+            </button>
+            <button class="cursor-pointer px-4 py-2 rounded-lg  duration-300 transform hover:scale-110 hover:text-red-500 equipment">
+              <a href="Equipment.html">EQUIPMENT</a>
+            </button>
+            <button class="text-red-700 cursor-pointer px-4 py-2 rounded-lg  duration-300 transform hover:scale-110 hover:text-red-500 services">
+              <a href="Services1.html">SERVICES</a>
+            </button>
+            <button class="cursor-pointer px-4 py-2 rounded-lg  duration-300 transform hover:scale-110 hover:text-red-500 about-us">
+              <a href="AboutUs.html">ABOUT US</a>
+            </button>
+            <button class="cursor-pointer px-4 py-2 rounded-lg  duration-300 transform hover:scale-110 hover:text-red-500 contact-us">
+              <a href="ContactUs.html">CONTACT US</a>
+            </button>
+          </div>
+        </div>
+      
+        <!--SETTINGS-->
+        <div class="relative flex justify-end ml-16 whitespace-nowrap">
+          <!-- Dropdown Button -->
+          <button class="profile-btn">
+              <img src="./icons/userLogo.png" class="w-14 h-14 rounded-full object-cover" alt="userProfile">
+          </button>
+      
+          
+          <a href="qrcode.html" class="flex items-center px-10 py-2 ml-5 mr-10 rounded-lg text-3xl text-red-600 bg-white">
+              YOUR QR CODE
+          </a>
+      
+          <!-- Dropdown Menu -->
+          <div class="absolute right-[-55px] w-72 mr-24 bg-black rounded-lg shadow-lg mt-16 hidden dropdown-menu" style="font-family: 'Bebas Neue', sans-serif;">
+              <div class="flex flex-col items-center gap-y-2 p-4">
+                  <p class="uppercase text-5xl text-white">Juan Dela Cruz</p>
+                  <a href="LoginPage.html" class="flex items-center w-[270px] h-12 bg-red-800 hover:bg-red-500 px-4 rounded-md transition-all duration-200">
+                    <img class="h-9" src="icons/logoutLogo.png" alt="Logout Icon"> 
+                    <span class="flex-1 mr-6 text-center text-2xl">Log out</span>
+                </a>
+              </div>
+          </div>
+      </div>
+      
+      </div>
+
+</div>
+          
+
+        <!--Bottom Side-->
+        <div class="mx-32 flex-grow h-full flex flex-col mt-14" style="font-family: Bebas Neue;">
+          <div class="mt-14 text-6xl h-[600px]">
+            <div class="mb-8">
+              <div class="text-red-600">Services</div>
+            </div>
+            <!--1-->
+            <div class="overflow-y-auto h-[calc(100vh-220px)] scrollbar-thin pr-4">
+              <div class="mb-12 bg-white w-full h-[650px] rounded-4xl flex flex-wrap ">
+                <div class="w-1/2 flex justify-end">
+                  <div class=" w-[780px] h-[600px] mt-4 ">
+                    <img src="icons/Locker.png" class="rounded-2xl h-full w-full object-cover" alt="">
+                  </div>
+                </div>
+                <div class="w-1/2  h-full">
+                  <div class="flex flex-col ml-10 w-[747px] mt-9 h-auto">
+                    <div class="text-red-600 text-5xl mb-5">PRIVATE LOCKER ROOMS</div>
+                    <div class="text-3xl text-justify" style="font-family: Buenard;">Our locker rooms are designed with your post-workout comfort and efficiency in mind. Step into a space equipped with sparkling clean, private showers, complete with complimentary toiletries. Secure your belongings in our spacious lockers, and take advantage of our well-lit, comfortable changing areas. We also provide amenities like hair dryers and ample mirrors, ensuring you can refresh and transition seamlessly back into your day, feeling revitalized and ready for whatever comes next.</div>
+                    
+                    <div class="mt-10 flex items-center gap-10  justify-center">
+                      <div>
+                        <div class="text-3xl text-red-600">PRICE:</div>
+                        <div class="text-5xl">₱200 Only /MONTH</div>
+                      </div>
+                      <button class="text-5xl text-white bg-red-600 font-light py-2 px-8 rounded-xl hover:cursor-pointer transition-all duration-300 transform hover:scale-110 ">
+                        <a href="Services2.html">AVAIL NOW</a>
+                      </button>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+
+
+              <!--2-->
+              <div class="mb-12 bg-white w-full h-[650px] rounded-4xl flex flex-wrap">
+                <div class="w-1/2 flex justify-end">
+                  <div class=" w-[780px] h-[600px] mt-4 ">
+                    <img src="icons/trainer.jfif" class="rounded-2xl h-full w-full object-cover object-[50%_20%]" alt="">
+                  </div>
+                </div>
+                <div class="w-1/2  h-full">
+                  <div class="flex flex-col ml-10 w-[747px] mt-9 h-auto">
+                    <div class="text-red-600 text-5xl mb-5">PERSONAL TRAINER</div>
+                    <div class="text-3xl text-justify" style="font-family: Buenard;">Unlock your fitness potential with personalized workout programs, expert nutritional guidance, and lifestyle tips designed to help you shed pounds, build muscle, boost energy, and improve overall well-being, supported by certified trainers who ensure safe, effective progress while giving you the choice of one-on-one coaching, group sessions, or independent training—empowering you to take control of your health, stay motivated, and achieve lasting results, your way!</div>
+                    
+                    <div class="mt-10 flex items-center gap-10  justify-center">
+                      <div>
+                        <div class="text-3xl text-red-600">PRICE:</div>
+                        <div class="text-5xl">₱700 Only /MONTH</div>
+                      </div>
+                      <button class="text-5xl text-white bg-red-600 font-light py-2 px-8 rounded-xl cursor-pointer transition-all duration-300 transform hover:scale-110 ">
+                        <a href="Services2.html">AVAIL NOW</a>
+                      </button>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+
+
+              <!--3-->
+              <div class="mb-12 bg-white w-full h-[650px] rounded-4xl flex flex-wrap">
+                <div class="w-1/2 flex justify-end">
+                  <div class=" w-[780px] h-[600px] mt-4 ">
+                    <img src="icons/fitness.png" class="rounded-2xl h-full w-full object-cover object-top" alt="">
+                  </div>
+                </div>
+                <div class="w-1/2  h-full">
+                  <div class="flex flex-col ml-10 w-[747px] mt-9 h-auto">
+                    <div class="text-red-600 text-5xl mb-5">FITNESS GYM WITH NO LIMITS</div>
+                    <div class="text-3xl text-justify" style="font-family: Buenard;">Are you tired of gym memberships that rush you out the door? Do you feel pressured to complete your workout within a rigid time frame? At peak performance gym, we believe your fitness journey should be on your schedule. That's why we're offering unlimited access, with no time limits.</div>
+                    
+                    <div class="mt-10 flex items-center gap-10  justify-center">
+                      <div>
+                        <div class="text-3xl text-red-600">PRICE:</div>
+                        <div class="text-5xl">₱400 Only /MONTH</div>
+                      </div>
+                      <button class="text-5xl text-white bg-red-600 font-light py-2 px-8 rounded-xl hover:cursor-pointer transition-all duration-300 transform hover:scale-110 ">
+                        <a href="Services2.html">AVAIL NOW</a>
+                      </button>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+              
+
+
+              
+          </div>
+        </div>
+      
+        
+
+
+        
+        
+       
+        
+<script>
+    $(document).ready(function () {
+   
+   $(".profile-btn").click(function () {
+       $(".dropdown-menu").toggleClass("block hidden");
+   });
+
+});
+</script>
+
+    </body>
+</html>

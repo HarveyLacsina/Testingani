@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <style>
+          @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Buenard:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zen+Dots&display=swap');
+          </style>
+        <!--<script src="https://unpkg.com/@tailwindcss/browser@4"></script>-->
+        <script src="tailwind.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        
+    </head>
+    <body class="font-sans h-screen bg-gray-900 flex flex-col">
+         <!--Top Side-->
+     <div class="flex fixed z-[9999999999999999] bg-black items-center justify-between w-full p-4 h-24" style="font-family: Bebas Neue;">
+          
+      <!--Logo-->
+        <div class="h-20 pl-14 mt-3 w-1/3 flex items-center basis-1/3">
+          <img class="h-full" src="icons/logo.jpg" alt="">
+          <!--Gym Name-->
+        <h1 class="mb-5 text-xl mt-4 text-white ml-3 whitespace-nowrap" style="font-family: 'Zen Dots', serif;">
+          Peak Performance Gym
+        </h1>
+        </div>
+        <div class="ml-auto basis-1/3">
+          <div class="flex whitespace-nowrap h-full text-2xl gap-10 text-white">
+            <button class="cursor-pointer px-4 py-2 rounded-lg  duration-300 transform hover:scale-110 hover:text-red-500 home">
+              <a href="Home.html">HOME</a>
+            </button>
+            <button class="cursor-pointer px-4 py-2 rounded-lg  duration-300 transform hover:scale-110 hover:text-red-500 equipment">
+              <a href="Equipment.html">EQUIPMENT</a>
+            </button>
+            <button class="cursor-pointer px-4 py-2 rounded-lg  duration-300 transform hover:scale-110 hover:text-red-500 services">
+              <a href="Services1.html">SERVICES</a>
+            </button>
+            <button class="cursor-pointer px-4 py-2 rounded-lg  duration-300 transform hover:scale-110 hover:text-red-500 about-us">
+              <a href="AboutUs.html">ABOUT US</a>
+            </button>
+            <button class="text-red-700 cursor-pointer px-4 py-2 rounded-lg  duration-300 transform hover:scale-110 hover:text-red-500 contact-us">
+              <a href="ContactUs.html">CONTACT US</a>
+            </button>
+          </div>
+        </div>
+      
+        <!--SETTINGS-->
+        <div class="relative flex justify-end ml-16 whitespace-nowrap">
+          <!-- Dropdown Button -->
+          <button class="profile-btn">
+              <img src="./icons/userLogo.png" class="w-14 h-14 rounded-full object-cover" alt="userProfile">
+          </button>
+      
+          
+          <a href="qrcode.html" class="flex items-center px-10 py-2 ml-5 mr-10 rounded-lg text-3xl text-red-600 bg-white">
+              YOUR QR CODE
+          </a>
+      
+          <!-- Dropdown Menu -->
+          <div class="absolute right-[-55px] w-72 mr-24 bg-black rounded-lg shadow-lg mt-16 hidden dropdown-menu" style="font-family: 'Bebas Neue', sans-serif;">
+              <div class="flex flex-col items-center gap-y-2 p-4">
+                  <p class="uppercase text-5xl text-white">Juan Dela Cruz</p>
+                  <a href="LoginPage.html" class="flex items-center w-[270px] h-12 bg-red-800 hover:bg-red-500 px-4 rounded-md transition-all duration-200">
+                      <img class="h-9" src="icons/logoutLogo.png" alt="Logout Icon"> 
+                      <span class="flex-1 mr-6 text-center text-2xl">Log out</span>
+                  </a>
+              </div>
+          </div>
+      </div>
+      
+      </div>
+
+</div>
+          
+        <!--Bottom Side-->
+        <div class="ml-36 flex-grow" style="font-family: Bebas Neue;">
+          <div class=" mt-60 text-9xl text-red-700"> Contact us
+          </div>
+          <div class="flex flex-col gap-y-9">
+            <div class="flex flex-row items-center ml-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="80" height="105" viewBox="0 0 80 105" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M40.0124 104.166C24.7055 87.3509 -1.32907 63.481 0.0528701 37.5158C2.31378 16.4063 19.3419 0 40.0124 0C60.6829 0 77.711 16.4063 79.9719 37.5158C80.9249 65.867 57.4036 85.4844 40.0124 104.166Z" fill="#F03E34"/>
+                <path d="M55.9461 39.5111C55.9461 48.9891 48.6424 56.6725 39.6327 56.6725C30.6231 56.6725 23.3193 48.9891 23.3193 39.5111C23.3193 30.0331 30.6231 22.3496 39.6327 22.3496C48.6424 22.3496 55.9461 30.0331 55.9461 39.5111Z" fill="#E5E5E5"/>
+                </svg>
+                <div class="text-5xl text-white ml-12 font-extralight tracking-widest">Address <br> 123 sesame street</div>
+            </div>
+            <div class="flex flex-row items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="101" height="105" viewBox="0 0 101 105" fill="none">
+                <path d="M101 0.166016H0V104.336H101V0.166016Z" fill="#F03E34"/>
+                <path d="M29.7613 42.8616C35.4144 59.2084 41.2669 65.7306 56.1556 72.6775L49.7032 82.2828C32.6064 73.6066 24.0908 58.9815 20.0803 47.5682L29.7613 42.8616Z" fill="white"/>
+                <path d="M34.5034 20.2938C37.5262 20.2813 39.8247 22.9475 39.6186 25.9665C39.2944 30.7175 39.6396 34.1452 40.5692 38.3941C41.0798 40.728 39.9246 43.0984 38.0888 44.6252C35.6144 46.683 33.724 49.3052 32.2215 51.5624C30.1391 54.6911 22.9726 54.4663 21.3877 51.0579C18.1305 44.0532 15.9231 31.1481 20.6795 22.4292C21.4267 21.0597 22.931 20.3418 24.4898 20.3353L34.5034 20.2938Z" fill="white"/>
+                <path d="M80.3906 72.1282C80.7665 69.1256 78.3989 66.5208 75.3801 66.3625C70.6295 66.1134 67.2718 65.3581 63.17 63.9233C60.9169 63.1352 58.4272 63.9981 56.6923 65.6389C54.354 67.8505 51.5263 69.4138 49.107 70.6355C45.7539 72.3287 45.115 79.4777 48.3045 81.4627C54.8593 85.542 67.3918 89.2876 76.6104 85.6093C78.0584 85.0315 78.9513 83.6229 79.1452 82.0746L80.3906 72.1282Z" fill="white"/>
+                </svg>
+              <div class="text-5xl text-white ml-12 font-extralight tracking-widest">Contact # <br> 09213432532</div>
+            </div>
+            <div class="flex flex-row items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="101" height="105" viewBox="0 0 101 105" fill="none">
+                <path d="M101 0.335938H0V104.506H101V0.335938Z" fill="#F03E34"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M77.5866 28.7803C79.57 28.7803 81.3313 29.7346 82.4396 31.2108L50.2528 58.3062L18.3528 31.7028C19.4194 29.9501 21.3431 28.7803 23.5391 28.7803H77.5866ZM17.4663 73.8852V36.5108L40.3554 55.5994L17.5135 74.6487C17.4824 74.3986 17.4663 74.1438 17.4663 73.8852ZM19.5597 78.4895C20.6254 79.4183 22.0168 79.9804 23.5391 79.9804H77.5866C78.895 79.9804 80.1067 79.5651 81.0981 78.8587L56.7757 58.3838L52.4019 62.0657C51.1649 63.1071 49.3628 63.1112 48.121 62.0756L43.6813 58.3731L19.5597 78.4895ZM60.0833 55.5994L83.4934 75.3064C83.6019 74.8504 83.6594 74.3745 83.6594 73.8852V35.7526L60.0833 55.5994Z" fill="white"/>
+                </svg>
+                <div class="text-5xl text-white ml-12 font-extralight tracking-widest">Email <br> peakperformancegym@gmail.com</div>
+            </div>
+          </div>
+
+          <button></button>
+          
+        </div>
+
+        <div class="absolute h-[800px] w-[800px] ml-[1000px] mt-[150px] bottom-0 overflow-hidden">
+          <img class="h-full object-contain" src="icons/machoman.png">
+      </div>
+        
+
+
+        
+        
+       
+        
+<script>
+    $(document).ready(function () {
+   $(".profile-btn").click(function () {
+       $(".dropdown-menu").toggleClass("block hidden");
+   });
+
+});
+</script>
+
+    </body>
+</html>
